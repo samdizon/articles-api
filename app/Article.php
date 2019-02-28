@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     public function author(){
-        return $this->belongsTo('App\People');
+        return $this->belongsTo(People::class);
     }
 
     public function comments(){
-        return $this->hasMany('App\Comment');
+        return $this->hasMany(Comment::class);
     }
 }

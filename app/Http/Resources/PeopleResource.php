@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class ArticleResource extends ResourceCollection
+class PeopleResource extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -15,13 +15,5 @@ class ArticleResource extends ResourceCollection
     public function toArray($request)
     {
         return parent::toArray($request);
-
-        return [
-            'type'          => 'articles',
-            'id'            => (string)$this->id,
-            'attributes'    => [
-                'title' => $this->title,
-            ],
-        ];
     }
 }

@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    public function article_comments(){
-        return $this->belongsTo('App\Article');
+    public function article(){
+        return $this->belongsTo(Article::Class);
     }
 
-    public function comment_author(){
-        return $this->belongsTo('App\People');
+    public function author(){
+        return $this->belongsTo(People::class);
     }
 }
